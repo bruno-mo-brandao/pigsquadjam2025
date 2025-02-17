@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d16wshx0krka"]
+
+[sub_resource type="Gradient" id="Gradient_lbjue"]
+colors = PackedColorArray(1, 1, 0.8, 1, 1, 1, 0.8, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u5uoo"]
+gradient = SubResource("Gradient_lbjue")
+
+[sub_resource type="Gradient" id="Gradient_ylkkv"]
+colors = PackedColorArray(0.211765, 0, 0.211765, 1, 0.211765, 0, 0.211765, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sr5y0"]
+gradient = SubResource("Gradient_ylkkv")
+width = 2000
+height = 2000
+
+[node name="Game" type="Node2D"]
+
+[node name="SpriteTest" type="Sprite2D" parent="."]
+position = Vector2(1100, 720)
+texture = SubResource("GradientTexture2D_u5uoo")
+
+[node name="Background" type="Sprite2D" parent="SpriteTest"]
+position = Vector2(-524, -396)
+texture = SubResource("GradientTexture2D_sr5y0")
+
+[node name="Camera2D" type="Camera2D" parent="SpriteTest"]
+position = Vector2(-508, -397)
